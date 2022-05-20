@@ -1,6 +1,18 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    domains: ["cdn.sanity.io", "images.unsplash.com"],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/dashboard",
+        destination: "https://admin-mindfullife.vercel.app/",
+        permanent: true,
+      },
+    ];
+  },
+};
