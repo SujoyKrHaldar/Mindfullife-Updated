@@ -9,7 +9,7 @@ function Landing({ data, background }) {
       <div
         className="w-full h-screen 
       before:absolute before:w-full before:h-full before:inset-0 
-      before:bg-gradient-to-tr from-[#1a4466] "
+      before:bg-gradient-to-tr from-[#1a4466]"
       >
         <BackgroundImage
           src={urlFor(background.background).url()}
