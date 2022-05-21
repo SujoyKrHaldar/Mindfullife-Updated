@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { sanityClient } from "../../api";
 import Landing from "../components/home/Landing";
+import About from "../components/home/About";
 
 const serviceQuery = `*[_type == "service" && isFeatured == true]|order(_createdAt desc){"id":_id, name}`;
 const brandQuery = `*[_type == "brand"]{"id":_id, name, brandLogo}`;
@@ -75,6 +76,7 @@ export default function Home({
       </Head>
 
       <Landing data={service} background={background} />
+      <About />
     </>
   );
 }

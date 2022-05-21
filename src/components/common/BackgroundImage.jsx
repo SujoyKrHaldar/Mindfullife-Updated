@@ -13,7 +13,7 @@ function BackgroundImage({ src, alt, className, position, objFit }) {
         objectPosition={position || "center"}
         layout="fill"
         loading="eager"
-        className={`${className} duration-700 ease-in-out group-hover:opacity-75 
+        className={`${className} duration-700 ease-in-out group-hover:opacity-75 z-[-2]
               ${isLoading ? " opacity-0" : " opacity-100"}`}
         onLoadingComplete={() => setLoading(false)}
       />
