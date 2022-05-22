@@ -19,10 +19,11 @@ function ServiceContent({ data }) {
         {data && (
           <div className="mt-4 flex items-center flex-wrap gap-4">
             {data.map((item, index) => (
-              <p className="bg-[#e6e6e6] px-4 py-2 font-semibold" key={index}>
+              <p className="bg-[#0c72ad30] px-4 py-2 font-semibold" key={index}>
                 {item.name}
               </p>
             ))}
+            <p>...</p>
           </div>
         )}
 

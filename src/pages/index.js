@@ -5,6 +5,7 @@ import About from "../components/home/About";
 import Service from "../components/home/Service";
 import Team from "../components/home/Team";
 import Review from "../components/home/Review";
+import Contact from "../components/home/Contact";
 
 const serviceQuery = `*[_type == "service" && isFeatured == true]|order(_createdAt desc){"id":_id, name}`;
 const brandQuery = `*[_type == "brand"]{"id":_id, name, brandLogo}`;
@@ -82,7 +83,8 @@ export default function Home({
       <About />
       <Service data={service} />
       <Team data={founder} team={teamData} />
-      <Review />
+      {review.length > 0 && <Review data={review} />}
+      <Contact />
     </>
   );
 }

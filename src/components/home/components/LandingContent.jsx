@@ -2,12 +2,12 @@ import Link from "next/link";
 
 function LandingContent({ data }) {
   return (
-    <div className="max-w-xl text-white">
+    <div className="max-w-2xl text-white">
       <h1 className="mb-4">
         What mental health needs is more sunlight and more unashamed
         conversation.
       </h1>
-      <p>
+      <p className="max-w-lg">
         Mindful Life is a one of its kind Psychological Wellness Centre
         currently based on Kolkata. We help to improve your Mental well being
         whenever and wherever suits you, with online or face-to-face sessions.

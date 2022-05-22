@@ -12,8 +12,12 @@ function TeamList({ data }) {
           >
             <BackgroundImage src={urlFor(data.profile).url()} alt={data.name} />
 
-            <div className="flex items-end rounded-2xl h-full ">
-              <div className="p-4 text-white">
+            <div className="flex items-end rounded-2xl h-full group bg-transparent hover:bg-[#00000070] duration-300">
+              <div className="p-4 text-white ">
+                <p className="mb-4 opacity-0 group-hover:opacity-100 duration-300">
+                  {" "}
+                  {data.biodata}
+                </p>
                 <p className="font-bold text-lg">{data.name}</p>
                 <p className="text-sm"> {data.role}</p>
               </div>
